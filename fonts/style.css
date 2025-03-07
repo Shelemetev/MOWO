@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Hauora';
+    src: url(../fonts/Hauora-Bold.woff2) format("woff2"),
+        url(../fonts/Hauora-ExtraBold.woff2) format("woff2"),
+        url(../fonts/Hauora-ExtraLight.woff2) format("woff2"),
+        url(../fonts/Hauora-Light.woff2) format("woff2"),
+        url(../fonts/Hauora-Medium.woff2) format("woff2"),
+        url(../fonts/Hauora-Regular.woff2) format("woff2"),
+        url(../fonts/Hauora-SemiBold.woff2) format("woff2");
+}

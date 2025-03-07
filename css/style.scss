@@ -368,6 +368,7 @@ section {
 
 .products {
     padding-top: 168px;
+    view-timeline-name: --resize-3;
     &__title {
         font-size: 48px;
         font-weight: 700;
@@ -384,6 +385,15 @@ section {
         margin-top: 176px;
     }
     &__item {
+        max-width: 100%;
+        &-img {
+            width: 0;
+            height: 0;
+            animation-timeline: --resize-3;
+            animation-name: resize-3;
+            animation-rage: entry 90% cover 20%;
+            position: relative;
+        }
         &-title {
             margin-top: 12px;
             font-size: 48px;
@@ -418,6 +428,18 @@ section {
             font-weight: 700;
             color: #ffffff
         }
+    }
+}
+
+@keyframes resize-3 {
+    from {
+        width: 0px;
+        height: 0px;
+    }
+
+    to {
+        width: 100%;
+        height: 396px;
     }
 }
 

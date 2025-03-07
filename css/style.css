@@ -361,6 +361,7 @@ text-wrap :wrap .works__item-text > p {
 }
 .products {
   padding-top: 168px;
+  view-timeline-name: --resize-3;
 }
 .products__title {
   font-size: 48px;
@@ -376,6 +377,17 @@ text-wrap :wrap .works__item-text > p {
   position: relative;
   z-index: 3;
   margin-top: 176px;
+}
+.products__item {
+  max-width: 100%;
+}
+.products__item-img {
+  width: 0;
+  height: 0;
+  animation-timeline: --resize-3;
+  animation-name: resize-3;
+  animation-rage: entry 90% cover 20%;
+  position: relative;
 }
 .products__item-title {
   margin-top: 12px;
@@ -412,6 +424,16 @@ text-wrap :wrap .works__item-text > p {
   color: #ffffff;
 }
 
+@keyframes resize-3 {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    width: 100%;
+    height: 396px;
+  }
+}
 .header--hidden {
   top: -100%;
 }/*# sourceMappingURL=style.css.map */

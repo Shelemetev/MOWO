@@ -63,6 +63,7 @@ section {
   font-size: 64px;
   font-weight: 700;
   margin-top: auto;
+  width: 1700px;
 }
 
 .main__inner {
@@ -153,9 +154,10 @@ section {
 .statistics__title {
   position: relative;
   z-index: 3;
-  font-size: 48px;
+  font-size: 64px;
   text-wrap: wrap;
   font-weight: 700;
+  width: 1634px;
 }
 .statistics__content {
   position: relative;
@@ -371,10 +373,11 @@ text-wrap :wrap .works__item-text > p {
   view-timeline-name: --resize-3;
 }
 .products__title {
-  font-size: 48px;
+  font-size: 64px;
   font-weight: 700;
   position: relative;
   z-index: 3;
+  width: 1700px;
 }
 .products__items {
   display: grid;

@@ -63,6 +63,7 @@ section {
     font-size: 64px;
     font-weight: 700;
     margin-top: auto;
+    width: 1700px;
 }
 
 .main__inner {
@@ -154,9 +155,10 @@ section {
     &__title {
         position: relative;
         z-index: 3;
-        font-size: 48px;
+        font-size: 64px;
         text-wrap:wrap;
         font-weight: 700;
+        width: 1634px;
     }
     &__content {
         position: relative;
@@ -378,10 +380,11 @@ section {
     padding-top: 168px;
     view-timeline-name: --resize-3;
     &__title {
-        font-size: 48px;
+        font-size: 64px;
         font-weight: 700;
         position: relative;
         z-index: 3;
+        width: 1700px;
     }
     &__items {
         display: grid;

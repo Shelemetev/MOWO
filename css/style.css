@@ -387,6 +387,13 @@ text-wrap :wrap .works__item-text > p {
   animation-timeline: --resize-3;
   animation-name: resize-3;
   animation-rage: entry 90% cover 20%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.products__item-img--bck {
+  width: 100%;
+  height: 396px;
   position: relative;
 }
 .products__item-title {

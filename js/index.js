@@ -101,8 +101,8 @@ document.querySelectorAll('.animated-img').forEach((item) => {
 		stagger: 0.1,
 		scrollTrigger: {
 			trigger: outEl, // Trigger the animation when this container enters the viewport
-			start: "top 90%",           // Start animation when the container's top is 80% down the viewport
-			end: "bottom 10%",          // End animation when the container's bottom is 20% down the viewport
+			start: "top 80%",           // Start animation when the container's top is 80% down the viewport
+			end: "bottom 0%",          // End animation when the container's bottom is 20% down the viewport
 			scrub: true,                // Smooth scrubbing effect
 		},
 	});

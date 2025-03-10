@@ -61,31 +61,53 @@ initSmoothScrolling()
 
 const animateText = Array.of(document.querySelectorAll(".animate-text"));
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 document.querySelectorAll(".animate-text").forEach((item) => {
-	const words = item.textContent.split(" ");
-	item.innerHTML = words.map(word => `<span class="word">${word}</span>`).join(" ");
-	const word = item.querySelectorAll(".word");
 
-	word.forEach((section) => {
+	const cahars = item.textContent.split("");
+	item.innerHTML = cahars.map(word => `<span class="char">${word}</span>`).join(" ");
+	const char = item.querySelectorAll(".char");
+	const outEl = item.parentElement;
 
-
-		gsap.to(section, {
+	char.forEach((c, index) => {
+		gsap.to(c, {
 			scrollTrigger: {
-			  trigger: item,
-			  start: "top 60%",
-			  end: "bottom 40%",
-			  scrub: true,
+				trigger: item, // Trigger the animation when this container enters the viewport
+				start: "top 90%",           // Start animation when the container's top is 80% down the viewport
+				end: "bottom 20%",          // End animation when the container's bottom is 20% down the viewport
+				scrub: true,                // Smooth scrubbing effect
 			},
-			filter: 'blur(0px) brightness(100%)',
-			y: 0,
-			stagger: 0.1,
-			duration: 0.5
-		  });
-		
+				opacity: 1,                   // Make the words fully visible
+				filter: 'blur(0px) brightness(100%)',	
+				y: 0,                         // Move the words back to their original position
+				stagger: 0.1 * index,                 // Delay between animations of each word
+				duration: 1 ,                // Duration of the animation for each word
+				delay : 0.1 * index,
+		});
 	})
+});
+
+document.querySelectorAll('.animated-img').forEach((item) => {
+
+	const outEl = item.parentElement
+
+	console.log(item);
+	
+	gsap.to(item, {
+		width: item.dataset.width, 
+		height: item.dataset.height,  
+		duration: 1,
+		stagger: 0.1,
+		scrollTrigger: {
+			trigger: outEl, // Trigger the animation when this container enters the viewport
+			start: "top 90%",           // Start animation when the container's top is 80% down the viewport
+			end: "bottom 10%",          // End animation when the container's bottom is 20% down the viewport
+			scrub: true,                // Smooth scrubbing effect
+		},
+	});
 })
+
 
 
 

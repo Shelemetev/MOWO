@@ -46,7 +46,8 @@
 <body class="body">
 
     
-    <img class="img-back" src="./video/screen-1.gif" alt="" srcset="">
+    <!-- <img class="img-back" src="./video/screen-1.gif" alt="" srcset=""> -->
+    <iframe class="img-back" src="https://player.vimeo.com/video/859309574?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     <div class="dark-back"></div>
     
     <section class="main">
@@ -73,6 +74,24 @@
                 <div class="bureau__item-content"> 
                     <h2 class="bureau__item-title">Архитектура и инженерия</h2>
                     <p class="bureau__item-text">Создаём архитектуру, где эстетика, функциональность и экономическая эффективность работают в балансе.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bureau__item">
+            <div class="bureau__item-inner">
+                <img src="./img/img2.png" class="bureau__item-bck" srcset="">
+                <div class="bureau__item-content"> 
+                    <h2 class="bureau__item-title">Архитектура и инженерия</h2>
+                    <p class="bureau__item-text">Создаём архитектуру, где эстетика, функциональность и экономическая эффективность работают в балансе.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bureau__item">
+            <div class="bureau__item-inner">
+                <img src="./img/img1.png" class="bureau__item-bck" srcset="">
+                <div class="bureau__item-content"> 
+                    <h2 class="bureau__item-title">Исследование территории</h2>
+                    <p class="bureau__item-text">Проводим комплексное исследование локации, выявляя её потенциал и ограничения</p>
                 </div>
             </div>
         </div>
@@ -113,12 +132,13 @@
             <div class="works__inner">
                 <h2 class="works__title">Наши работы</h2>
                 <div class="works__items">
-                    
                     <div class="works__item">
                         <h3 class="works__item-title">Патрокл - благоустройство территории озера Патрокл</h3>
                         <div class="works__item-inner">
                             <p class="works__item-text">озера Патрокл</p>
-                            <img src="./img/scale.png" alt="" class="works__item-img">
+                            <div class="works__item-img--back" >
+                                <img src="./img/Mask group.png" alt="" animated-img data-width="725" data-height="416" class="works__item-img animated-img">
+                            </div>
                             <p class="works__item-text"> в городе Владивосток</p>
                         </div>
                     </div>
@@ -127,12 +147,54 @@
                         <h3 class="works__item-title">Nusa Dua - комплексная застройка <br> гостиничных вилл </h3>
                         <div class="works__item-inner">
                             <p class="works__item-text">на южных склонах</p>
-                            <img src="./img/scale.png" alt="" class="works__item-img">
+                            <div class="works__item-img--back">
+                                <img src="./img/Mask group.png" alt="" data-width="725" data-height="416"  class="works__item-img animated-img">
+                            </div>
                             <p class="works__item-text">острова Bali</p>
                         </div>
                     </div>
 
+                    <div class="works__item">
+                        <h3 class="works__item-title">Патрокл - благоустройство территории озера Патрокл</h3>
+                        <div class="works__item-inner">
+                            <p class="works__item-text">озера Патрокл</p>
+                            <div class="works__item-img--back">
+                                <img src="./img/Mask group.png" alt="" data-width="725" data-height="416"  class="works__item-img animated-img">
+                            </div>
+                            <p class="works__item-text"> в городе Владивосток</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="application">
+        <div class="container">
+            <div class="application__inner">
+                <h2 class="application__title">Превратим идею в архитектуру</h2>
+                <p class="application__text">Индивидуальный подход к каждому проекту и гарантированное качество исполнения. Заполните форму, и мы подготовим персональное предложение.</p>
+                <form action="" class="application__form">
+                    <div class="application__form-block">
+                        <input type="text" placeholder="Имя" class="application__form-input">
+                        <input type="text" placeholder="Номер телефона" class="application__form-input">
+                    </div>
+                    <div class="application__form-block">
+                        <input type="text" placeholder="Электронная почта" class="application__form-input">
+                        <input type="text" placeholder="Компания" class="application__form-input">
+                    </div>
+                    <div class="application__form-block">
+                        <textarea placeholder="Комментарий" class="application__form-textarea"></textarea>
+                    </div>
+                    <div class="application__form-block">
+                        <div class="application__form-block--left">
+                            <input type="checkbox" class="custom-checkbox" id="custom-1">
+                            <label for="custom-1" class="application__form-checkbox"></label>
+                            <p class="application__form-text">Даю согласие на обработку <a class="gray-link">персональных данных</a></p>
+                        </div>
+                        <button type="submit" class="application__form-btn">Оставить заявку</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -140,27 +202,41 @@
     <section class="authors">
         <div class="container">
             <div class="authors__inner">
+                <div class="authors__content">
+                    <h2 class="authors__title">Наша команда</h2>
+                    <p class="authors__text">Каждый проект — это результат совместного творчества архитекторов, урбанистов, дизайнеров и инженеров. Именно такой командный подход позволяет нам создавать по-настоящему выдающиеся решения, где функциональность встречается с искусством.</p>
+                    <button class="authors__btn">Оставить заявку</button>
+                </div>
                 <div class="authors__items">
                     <div class="authors__item">
-                        <div class="authors__item-img--block">
-                            <img src="./img/person.png" alt="" class="authors__item-img">
-                        </div>
-                        <h3 class="authors__item-title animate-text">Кривенко Антон </h3>
-                        <p class="authors__item-text animate-text">Главный архитектор, основатель бюро</p>
+                        <img src="./img/person.png" alt="" class="authors__item-img">
+                        <h3 class="authors__item-title">Кривенко Антон </h3>
+                        <p class="authors__item-text">Главный архитектор, основатель бюро</p>
                     </div>
                     <div class="authors__item">
-                        <div class="authors__item-img--block">
-                            <img src="./img/person.png" alt="" class="authors__item-img">
-                        </div>
-                        <h3 class="authors__item-title animate-text">Кривенко Антон </h3>
-                        <p class="authors__item-text animate-text">Главный архитектор, основатель бюро</p>
+                        <img src="./img/person-2.png" alt="" class="authors__item-img">
+                        <h3 class="authors__item-title">Кривенко Антон </h3>
+                        <p class="authors__item-text">Главный архитектор, основатель бюро</p>
                     </div>
                     <div class="authors__item">
-                        <div class="authors__item-img--block">
-                            <img src="./img/person.png" alt="" class="authors__item-img">
-                        </div>
-                        <h3 class="authors__item-title animate-text">Кривенко Антон </h3>
-                        <p class="authors__item-text animate-text">Главный архитектор, основатель бюро</p>
+                        <img src="./img/person-3.png" alt="" class="authors__item-img">
+                        <h3 class="authors__item-title">Кривенко Антон </h3>
+                        <p class="authors__item-text">Главный архитектор, основатель бюро</p>
+                    </div>
+                    <div class="authors__item">
+                        <img src="./img/person.png" alt="" class="authors__item-img">
+                        <h3 class="authors__item-title">Кривенко Антон </h3>
+                        <p class="authors__item-text">Главный архитектор, основатель бюро</p>
+                    </div>
+                    <div class="authors__item">
+                        <img src="./img/person-2.png" alt="" class="authors__item-img">
+                        <h3 class="authors__item-title">Кривенко Антон </h3>
+                        <p class="authors__item-text">Главный архитектор, основатель бюро</p>
+                    </div>
+                    <div class="authors__item">
+                        <img src="./img/person-3.png" alt="" class="authors__item-img">
+                        <h3 class="authors__item-title">Кривенко Антон </h3>
+                        <p class="authors__item-text">Главный архитектор, основатель бюро</p>
                     </div>
                 </div>
             </div>
@@ -170,35 +246,35 @@
     <section class="products">
         <div class="container">
             <div class="products__inner">
-                <h2 class="products__title animate-text">Технологии, которые делают наш продукт точным эффективным и коммерчески успешным</h2>
+                <h2 class="products__title">Технологии, которые делают наш продукт точным эффективным и коммерчески успешным</h2>
                 <div class="products__items">
                     <div class="products__item">
                         <div class="products__item-img--bck">
-                            <img src="./img/product-1.png" alt="" class="products__item-img">
+                            <img src="./img/product-1.png" alt="" data-width="100%" data-height="100%" class="products__item-img animated-img">
                         </div>
                         <h3 class="products__item-title">BIM</h3>
-                        <p class="products__item-text">Мы применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками. Цифровая модель выявляет ошибки ещё на этапе проектирования, предотвращает коллизии, ускоряет согласования и снижает издержки. BIM даёт заказчику полный контроль над процессом и упрощает эксплуатацию объекта, повышая его ликвидность и долгосрочную ценность.</p>
+                        <p class="products__item-text">Применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками.</p>
                     </div>
                     <div class="products__item">
                         <div class="products__item-img--bck">
-                            <img src="./img/product-1.png" alt="" class="products__item-img">
+                            <img src="./img/product-1.png" alt="" data-width="100%" data-height="100%" class="products__item-img animated-img">
                         </div>
                         <h3 class="products__item-title">BIM</h3>
-                        <p class="products__item-text">Мы применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками. Цифровая модель выявляет ошибки ещё на этапе проектирования, предотвращает коллизии, ускоряет согласования и снижает издержки. BIM даёт заказчику полный контроль над процессом и упрощает эксплуатацию объекта, повышая его ликвидность и долгосрочную ценность.</p>
+                        <p class="products__item-text">Применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками.</p>
                     </div>
                     <div class="products__item">
                         <div class="products__item-img--bck">
-                            <img src="./img/product-1.png" alt="" class="products__item-img">
+                            <img src="./img/product-1.png" alt="" data-width="100%" data-height="100%" class="products__item-img animated-img">
                         </div>
                         <h3 class="products__item-title">BIM</h3>
-                        <p class="products__item-text">Мы применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками. Цифровая модель выявляет ошибки ещё на этапе проектирования, предотвращает коллизии, ускоряет согласования и снижает издержки. BIM даёт заказчику полный контроль над процессом и упрощает эксплуатацию объекта, повышая его ликвидность и долгосрочную ценность.</p>
+                        <p class="products__item-text">Применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками.</p>
                     </div>
                     <div class="products__item">
                         <div class="products__item-img--bck">
-                            <img src="./img/product-1.png" alt="" class="products__item-img">
+                            <img src="./img/product-1.png" alt="" data-width="100%" data-height="100%" class="products__item-img animated-img">
                         </div>
                         <h3 class="products__item-title">BIM</h3>
-                        <p class="products__item-text">Мы применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками. Цифровая модель выявляет ошибки ещё на этапе проектирования, предотвращает коллизии, ускоряет согласования и снижает издержки. BIM даёт заказчику полный контроль над процессом и упрощает эксплуатацию объекта, повышая его ликвидность и долгосрочную ценность.</p>
+                        <p class="products__item-text">Применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками.</p>
                     </div>
                 </div>
             </div>

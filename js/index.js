@@ -5,8 +5,6 @@ window.addEventListener('scroll', () => {
     const rect = body.getBoundingClientRect();
     const scrollProgress = ((-rect.top + window.innerHeight) / body.offsetHeight);
 
-    console.log(scrollProgress);
-
     if (scrollProgress > 0) {
         // Изменяем прозрачность фона
         bck.style.backgroundColor = `rgba(0, 0, 0, ${scrollProgress})`;
@@ -70,45 +68,50 @@ document.querySelectorAll(".animate-text").forEach((item) => {
 	const char = item.querySelectorAll(".char");
 	const outEl = item.parentElement;
 
-	char.forEach((c, index) => {
-		gsap.to(c, {
-			scrollTrigger: {
-				trigger: item, // Trigger the animation when this container enters the viewport
-				start: "top 90%",           // Start animation when the container's top is 80% down the viewport
-				end: "bottom 20%",          // End animation when the container's bottom is 20% down the viewport
-				scrub: true,                // Smooth scrubbing effect
-			},
-				opacity: 1,                   // Make the words fully visible
-				filter: 'blur(0px) brightness(100%)',	
-				y: 0,                         // Move the words back to their original position
-				stagger: 0.1 * index,                 // Delay between animations of each word
-				duration: 1 ,                // Duration of the animation for each word
-				delay : 0.1 * index,
-		});
-	})
+	gsap.to(char, {
+		scrollTrigger: {
+			trigger: item, // Trigger the animation when this container enters the viewport
+			start: "top 90%",           // Start animation when the container's top is 80% down the viewport
+			end: "bottom 80%",          // End animation when the container's bottom is 20% down the viewport
+			scrub: true,                // Smooth scrubbing effect
+		},
+			opacity: 1,                   // Make the words fully visible
+			filter: 'blur(0px) brightness(100%)',	
+			y: 0,                         // Move the words back to their original position
+			stagger: 0.5,                 // Delay between animations of each word
+			duration: 1 ,       
+	});
+
 });
 
 document.querySelectorAll('.animated-img').forEach((item) => {
 
 	const outEl = item.parentElement
-
-	console.log(item);
 	
 	gsap.to(item, {
 		width: item.dataset.width, 
 		height: item.dataset.height,  
 		duration: 1,
+		delay: 1,
 		stagger: 0.1,
 		scrollTrigger: {
 			trigger: outEl, // Trigger the animation when this container enters the viewport
-			start: "top 80%",           // Start animation when the container's top is 80% down the viewport
-			end: "bottom 0%",          // End animation when the container's bottom is 20% down the viewport
+			start: 'top 100%',           // Start animation when the container's top is 80% down the viewport
+			end: "bottom 65%",          // End animation when the container's bottom is 20% down the viewport
 			scrub: true,                // Smooth scrubbing effect
 		},
 	});
 })
 
 
-
-
-
+gsap.to('.horizontal-section', {
+	x: '-100%', // Смещение на 200% ширины экрана
+	ease: 'none',
+	scrollTrigger: {
+		trigger: '.horizontal-container',
+		start: 'top 20%',
+		end: '+=300%', // Длина горизонтальной секции
+		scrub: 1, // Плавный скролл
+		pin: true, // Фиксация секции,
+	},
+});

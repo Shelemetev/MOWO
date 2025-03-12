@@ -87,6 +87,8 @@ document.querySelectorAll(".animate-text").forEach((item) => {
 document.querySelectorAll('.animated-img').forEach((item) => {
 
 	const outEl = item.parentElement
+
+	console.log(item,outEl);
 	
 	gsap.to(item, {
 		width: item.dataset.width, 
@@ -95,10 +97,11 @@ document.querySelectorAll('.animated-img').forEach((item) => {
 		delay: 1,
 		stagger: 0.1,
 		scrollTrigger: {
-			trigger: outEl, // Trigger the animation when this container enters the viewport
+			trigger: item, // Trigger the animation when this container enters the viewport
 			start: 'top 100%',           // Start animation when the container's top is 80% down the viewport
 			end: "bottom 65%",          // End animation when the container's bottom is 20% down the viewport
 			scrub: true,                // Smooth scrubbing effect
+			markers: true
 		},
 	});
 })

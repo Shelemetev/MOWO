@@ -39,7 +39,7 @@ let lenis;
 const initSmoothScrolling = () => {
 	// Instantiate the Lenis object with specified properties
 	lenis = new Lenis({
-		lerp: 0.05, // Lower values create a smoother scroll effect
+		lerp: 0.06, // Lower values create a smoother scroll effect
 		smoothWheel: true // Enables smooth scrolling for mouse wheel events
 	});
 
@@ -62,6 +62,8 @@ const animateText = Array.of(document.querySelectorAll(".animate-text"));
 gsap.registerPlugin(ScrollTrigger)
 
 document.querySelectorAll(".animate-text").forEach((item) => {
+
+	ScrollTrigger.refresh();
 
 	const cahars = item.textContent.split("");
 	item.innerHTML = cahars.map(word => `<span class="char">${word}</span>`).join(" ");
@@ -88,7 +90,7 @@ document.querySelectorAll('.animated-img').forEach((item) => {
 
 	const outEl = item.parentElement
 
-	console.log(item,outEl);
+	ScrollTrigger.refresh();
 	
 	gsap.to(item, {
 		width: item.dataset.width, 
@@ -100,8 +102,7 @@ document.querySelectorAll('.animated-img').forEach((item) => {
 			trigger: item, // Trigger the animation when this container enters the viewport
 			start: 'top 100%',           // Start animation when the container's top is 80% down the viewport
 			end: "bottom 65%",          // End animation when the container's bottom is 20% down the viewport
-			scrub: true,                // Smooth scrubbing effect
-			markers: true
+			scrub: 0.5,    
 		},
 	});
 })
@@ -116,5 +117,15 @@ gsap.to('.horizontal-section', {
 		end: '+=300%', // Длина горизонтальной секции
 		scrub: 1, // Плавный скролл
 		pin: true, // Фиксация секции,
+		onRefresh: () => {
+            console.log('ScrollTrigger refreshed');
+        }
 	},
+});
+
+window.addEventListener('scroll', () => {
+	console.log(window.scrollY);
+    if (window.scrollY > 100) { // Если пользователь прокручивает вверх
+        ScrollTrigger.refresh(); // Обновляем ScrollTrigger
+    }
 });

@@ -202,10 +202,11 @@ section {
 
 .char {
   display: inline-block;
-  transform: translateY(-80px); /* Slight downward offset */
-  filter: blur(15px) brightness(0%);
-  will-change: filter;
+  transform: translateY(0); /* Slight downward offset */
+  filter: blur(0px) brightness(100%);
+  will-change: filter transform;
   position: relative;
+  opacity: 0, 
 }
 
 .works {

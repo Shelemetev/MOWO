@@ -73,15 +73,16 @@ document.querySelectorAll(".animate-text").forEach((item) => {
 	gsap.to(char, {
 		scrollTrigger: {
 			trigger: item, // Trigger the animation when this container enters the viewport
-			start: "top 90%",           // Start animation when the container's top is 80% down the viewport
-			end: "bottom 80%",          // End animation when the container's bottom is 20% down the viewport
+			start: "top 20%",           // Start animation when the container's top is 80% down the viewport
+			end: "bottom 10%",          // End animation when the container's bottom is 20% down the viewport
 			scrub: true,                // Smooth scrubbing effect
+			markers: true
 		},
 			opacity: 1,                   // Make the words fully visible
-			filter: 'blur(0px) brightness(100%)',	
+			filter: 'blur(15px) brightness(0%)',	
 			y: 0,                         // Move the words back to their original position
 			stagger: 0.5,                 // Delay between animations of each word
-			duration: 1 ,       
+			duration: 1 ,  
 	});
 
 });
